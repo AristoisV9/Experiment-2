@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	float a;
+	float b;
+	float c;
+	float d;
+	float e;
+	float f;
+	
+	
+	cout<<"This program will show your monthly water bill\nPress Enter to continue!";
+	cin.ignore();
+	cout<<"Please enter the amount of gallons you have taken recently and during the previous month!\nGallons taken recently: ";
+	cin>>a;
+	cout<<"Gallons taken during the previous month: ";
+	cin>>b;
+	cout<<"Are there any unpaid balance? If so please enter the amount: Php ";
+	cin>>c;
+	
+	
+	if (c<=0)
+	{	
+		d = a - b;
+		e = (d*1.10) + 35;
+		cout<<"Water Bill: Php "<< e;
+	}
+	else if (c>0)
+	{
+		d = a - b;
+		e = (d*1.10) + 35 + 20;
+		cout<<"Water Bill: Php "<< e;
+	}
+	else
+		cout<<"Invalid Input!";
+	
+	
+	return 0;
+	
+}
