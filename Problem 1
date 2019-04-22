@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	char x;
+	float y;
+	float d;
+	float e;
+	float f;
+	
+	
+	cout<<"This program will show your monthly internet service bill\nPress Enter to continue!";
+	cin.ignore();
+	cout<<"Please choose a package according to their corresponding number\nA = Package A\nB = Package B\nC = Package C\nPackage: ";
+	cin>>x;
+	
+	switch (x)
+	{
+		case 'A':
+		case 'a':
+		{
+			cout<<"Enter the amount of hours used\nHours: ";
+			cin>>y;
+			if (y>=10)
+			{
+				d = y - 10;
+				e = d*20;
+				f = e + 995;
+				cout<<"Total Amount Due: P"<< f;
+			}
+			else
+				cout<<"Total Amount Due: P995";
+		break;
+		}
+		case 'B':
+		case 'b':
+		{
+			cout<<"Enter the amount of hours used\nHours: ";
+			cin>>y;
+			if (y>=20)
+			{
+				d = y - 20;
+				e = d*10;
+				f = e + 1495;
+				cout<<"Total Amount Due: P"<< f;
+			}
+			else
+				cout<<"Total Amount Due: P1495";
+		break;
+		}
+		case 'C':
+		case 'c':
+			cout<<"Unlimited Access Costumer!\nTotal Amount Due: P1995";
+			break;
+		default :
+			cout<<"Invalid Input!";
+	}
+	return 0;
+}
