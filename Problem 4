@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	float a;
+	float b;
+	float c;
+	
+	cout<<"Enter 3 numbers and this program will guess which among them is the largest number!";
+	cin.ignore();
+	cout<<"First Number: ";
+	cin>> a;
+	cout<<"Second Number: ";
+	cin>> b;
+	cout<<"Third Number: ";
+	cin>> c;
+	
+	if (a>b && a>c)
+		cout<<"The largest number is "<< a;
+	else if (b>a && b>c)
+		cout<<"The largest number is "<< b;
+	else if (c>a && c>b)
+		cout<<"The largest number is "<< c;
+	else if (a==b && a>c && b>c)
+		cout<<"The largest number is "<< a;
+	else if (a==c && c>b && c>b)
+		cout<<"The largest number is "<< a;
+	else if (b==c && b>a && c>a)
+		cout<<"The largest number is "<< b;
+	else if (a==b && a==c && b==c)
+		cout<<"The largest number is "<< a;
+	else
+		cout<<"Invalid Input!";
+		
+	return 0;
+}
